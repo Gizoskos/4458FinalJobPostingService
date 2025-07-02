@@ -21,11 +21,10 @@ public class JobPostingServiceImpl implements JobPostingService {
 
 
     @Override
-    /*@Cacheable(value = "jobCache", key = "#id")*
+    /*@Cacheable(value = "jobCache", key = "#id")*/
 
-     */
     public Job getJobById(String id) {
-        return repository.findByStringId(id)
+        return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Job not found"));
     }
 

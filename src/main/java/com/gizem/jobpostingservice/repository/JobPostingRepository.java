@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface JobPostingRepository extends MongoRepository<Job, String> {
     List<Job> findByDepartmentIgnoreCase(String department);
-    @Query("{ '_id': ?0 }")
-    Optional<Job> findByStringId(String id);
+   /* @Query("{ '_id': ?0 }")
+    Optional<Job> findByStringId(String id);*/
 }
